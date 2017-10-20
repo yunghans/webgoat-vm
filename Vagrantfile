@@ -13,6 +13,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "thdengops/ubuntu-14.04-dev"
   #config.vm.provision "shell", inline: "ifconfig"
   config.vm.provision "shell", path: "install.sh"
+  config.vm.provision "shell", path: "run.sh", run: "always"
 
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
